@@ -5,62 +5,21 @@
 <!-- @component
 Test component section for displaying elements while building.
  -->
-<section id="test">
-    <div class="content">
-        <Logo background="#FFFFFF" shortArc="#f1a709" longArc="#00379f" />
-        <div class="intro">
-            <p>PROJECT Emory</p>
-            <button>Learn more</button>
+<section id="test" class="flex flex-col">
+    <div class="justify-center flex my-32 mt-56">
+        <div class="w-96 mr-28">
+            <Logo background="#FFFFFF" shortArc="#f1a709" longArc="#00379f" />
+        </div>
+        <div class="w-96 items-center">
+            <p class="leading-none font-bold text-8xl mt-12 mb-12">PROJECT Emory</p>
+            <button class="text-lg bg-[#f1a709] border-none p-[10px] rounded-[5px] w-40 h-12">Learn more</button>
         </div>
     </div>
+
     <br>
     
-    <div class="arrow">
+    <div class="arrow self-center mt-32 leading-6 font-bold py-[10px] px-[8px] rounded-3xl text-white w-fit bg-[#00379f] text-2xl">
         <div>&#8744</div>
         <div>&#8744;</div>
     </div>
 </section>
-
-<style>
-    .content {
-        display: flex;
-        justify-content: space-between;
-        padding-left: 10px;
-        margin-bottom: 5rem;
-        margin-top: 3rem;
-        max-height: 400;
-    }
-    p {
-        font-weight: 700;
-        font-size: 6rem;
-        margin: 0;
-        margin-top: 3rem;
-    }
-    .intro {
-        width: 65vw;
-        margin-left: 8vw;
-        margin-right: 10px;
-    }
-
-    button {
-        background-color: #f1a709;
-        border: none;
-        padding: 10px 10px;
-        border-radius: 5px;
-        font-weight: 400;
-        font-size: 18px;
-        margin-top: 2rem;
-        width: 10rem;
-        height: 3rem;
-    }
-    .arrow {
-        font-size: 24px;
-        background-color: #00379f;
-        width:fit-content;
-        color: white;
-        border-radius: 20px;
-        padding: 10px 8px;
-        font-weight: 700;
-        line-height: 22px;
-    }
-</style>

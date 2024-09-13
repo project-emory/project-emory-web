@@ -5,11 +5,11 @@
 <!-- @component
 Test component section for displaying elements while building.
  -->
-<section id="about">
-    <div class="vision">
-        <div class="text">
+<section id="about" class="bg-slate-200 h-screen py-10 my-60 items-center">
+    <div class="flex justify-center items-center h-max gap-5">
+        <div class="flex-[0.8]">
             <h1>The Vision</h1>
-            <p>
+            <p class="text-sm">
                 At Project Emory, we’re connecting students with a passion for project building with like-minded students to build impactful projects for the community.
                 <br>
                 <br>
@@ -37,16 +37,9 @@ Test component section for displaying elements while building.
 </section>
 
 <style>
-    .vision {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: max-content; 
-    }
     .text {
         width: 380px;
         height: 225px;
-        font-size: 12px;
     }
     .img {
         width: 380px;
@@ -67,12 +60,6 @@ Test component section for displaying elements while building.
         width: 25%; /* This makes the border half the width of the h1 */
         height: 2px; /* Border thickness */
         background-color: black; /* Border color */
-    }
-    #about {
-        margin:0%;
-        padding: 0%;
-        margin-top: 200px;
-        margin-bottom: 200px;
     }
 
 </style>

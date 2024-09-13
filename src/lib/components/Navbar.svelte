@@ -5,25 +5,25 @@
 <!-- @component
 A simple navbar component to provide easy jumping between sections on the page.
  -->
-<section style="padding-top: 15px">
-    <nav>
-        <ul>
-            <li class="logo">
-                <a href="/">
-                    <Logo background="#FFFFFF" shortArc="#f1a709" longArc="#00379f" />
-                </a>
-            </li>
-            <div class="nav">
-                <li>
+<section class="pt-3 fixed top-0 w-full z-1000">
+    <nav class="flex justify-center items-center">
+        <ul class="flex justify-center items-center w-6/12 bg-blue-100 py-2 px-6 rounded-lg">
+            <div class="nav w-full flex items-center justify-between">
+                <li class=" bg-white p-2 px-4 rounded-lg w-[125px] flex justify-center">
                     <a href="/#about-us"> About Us </a>
                 </li>
-                <li>
+                <li class=" bg-white p-2 px-4 rounded-lg w-[125px] flex justify-center">
                     <a href="/#events"> Events </a>
                 </li>
-                <li>
+                <li class="rounded-full w-12">
+                    <a href="/">
+                        <Logo background="transparent" shortArc="#f1a709" longArc="#00379f" />
+                    </a>
+                </li>
+                <li class=" bg-white p-2 px-4 rounded-lg w-[125px] flex justify-center">
                     <a href="/#get-involved"> Get Involved </a>
                 </li>
-                <li>
+                <li class=" bg-white p-2 px-4 rounded-lg w-[125px] flex justify-center">
                     <a href="/#contact"> Contact </a>
                 </li>
             </div>
@@ -32,36 +32,6 @@ A simple navbar component to provide easy jumping between sections on the page.
 </section>
 
 <style>
-    ul {
-        background-color: white;
-        list-style-type: none;
-        border-color: #00379f;
-        border-bottom: solid;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 0rem 1rem 0.5rem 1rem;
-    }
 
-    .logo {
-        width: 2rem;
-    }
-
-    nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .nav {
-        display: flex;
-        gap: 2rem;
-    }
-
-    a {
-        text-decoration: none;
-        color: var(--text-secondary);
-    }
 </style>
