@@ -5,7 +5,7 @@
 <!-- @component
 Test component section for displaying elements while building.
  -->
-<section id="about" class="bg-slate-200 h-screen py-10 my-60 items-center flex flex-col">
+<section id="about" class="bg-slate-200 h-[200vh] py-10 my-60 items-center flex flex-col">
     <section class="w-full max-w-6xl px-4 py-10">
         <div class="flex flex-row justify-between items-center gap-8">
             <div class="flex-1 flex flex-col items-start">
@@ -43,7 +43,7 @@ Test component section for displaying elements while building.
     <section class="w-full h-screen max-w-6xl px-4 py-10 text-right">
         <h2 class="mb-14 text-4xl font-bold pb-3 relative after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-[7%] after:h-[0.2rem] after:bg-black">Meet Our Team</h2>
 
-        <Carousel.Root class="w-full h-2/3"> <!-- Set a fixed height or a relative height like h-[500px] -->
+        <Carousel.Root class="w-full h-1/3"> <!-- Set a fixed height or a relative height like h-[500px] -->
             <Carousel.Content class="h-full flex">
               {#each Array(5) as _, i (i)}
                 <Carousel.Item class="basis-1/2 h-full flex"> <!-- Ensure Carousel.Item takes full height and uses flex -->
