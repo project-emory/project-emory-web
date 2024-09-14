@@ -31,7 +31,4 @@ A simple navbar component to provide easy jumping between sections on the page.
     </nav>
 </section>
 
-<style>
 
-
-</style>
