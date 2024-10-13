@@ -5,7 +5,7 @@
 <!-- @component
 A simple navbar component to provide easy jumping between sections on the page.
  -->
-<section class="pt-3 fixed top-0 w-full z-1000">
+<section class="pt-3 fixed top-0 w-full z-[99999]">
     <nav class="flex justify-center items-center">
         <ul class="flex justify-center items-center w-6/12 bg-blue-100 py-2 px-6 rounded-lg">
             <div class="nav w-full flex items-center justify-between">
