@@ -1,5 +1,17 @@
 <script lang="ts">
     import Logo from "$lib/components/Logo.svelte";
+    export const scrollTo = (element: HTMLElement, offset: number = 0) => {
+        const y = element.getBoundingClientRect().top + window.pageYOffset + offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+
+    function handleClick(event: MouseEvent, sectionId: string) {
+        event.preventDefault();
+        const section = document.getElementById(sectionId);
+        if (section) {
+            scrollTo(section);
+        }
+    }
 </script>
 
 <!-- @component
@@ -18,8 +30,8 @@ Test component section for displaying elements while building.
 
     <br>
     
-    <div class="arrow self-center mt-26 leading-6 font-bold py-[10px] px-[8px] rounded-3xl text-white w-fit bg-[#00379f] text-2xl">
+    <a href='/#about' on:click={(e) => handleClick(e, 'about')} class="arrow self-center mt-26 leading-6 font-bold py-[10px] px-[8px] rounded-3xl text-white w-fit bg-black text-2xl">
         <div>&#8744</div>
         <div>&#8744;</div>
-    </div>
+    </a>
 </section>

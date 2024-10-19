@@ -2,13 +2,13 @@
     import * as Carousel from "$lib/components/ui/carousel/index.js";
 
     const teamMembers = [
-        { name: "Andrew Chung", role: "President", snack: "Chips Ahoy", contact:"andrew.chung@emory.edu", image: 'andrewc.jpg' },
-        { name: "Andrew Lu", role: "Secretary", snack: "Chex Mix", contact:"andrew.lu@emory.edu", image: 'andrewl.jpg' }, 
-        { name: "Mac Guintu", role: "Vice President", snack: "Turtle Chips", contact: "frederic.guintu@emory.edu", image: 'mac.jpg'},
-        { name: "Aisha Sajo", role: "Event Planner Chair", snack: "Skinny Pop Popcorn", contact: "aisha.sajo@emory.edu", image: 'aisha.jpg' }, 
-        { name: "Leo Huang", role: "Public Relations Chair", snack: "Caramel Corn Peanuts Snack", contact: "leo.huang@emory.edu", image: 'leo.jpg' }, 
-        { name: "Freddy Xiong", role: "Co-Hackathon Director", snack: "Coffee", contact: "freddy.xiong@emory.edu", image: 'freddy.jpg' },
-        { name: "Taeeun Kim", role: "Co-Hackathon Director", snack: "Hardtack", contact: "taeeun.kim@emory.edu", image: 'taeeun.jpg' },
+        { name: "Andrew Chung", role: "President", website: "https://achung1020.github.io/ac-website/", linkedin:"http://linkedin.com/in/andrew0chung", image: 'andrewc.jpg' },
+        { name: "Andrew Lu", role: "Secretary", website: "https://andrewtlu.github.io", linkedin:"https://www.linkedin.com/in/andrewtlu/", image: 'andrewl.jpg' }, 
+        { name: "Mac Guintu", role: "Vice President", website: "Turtle Chips", linkedin: "frederic.guintu@emory.edu", image: 'mac.jpg'},
+        { name: "Aisha Sajo", role: "Event Planner Chair", website: "Skinny Pop Popcorn", linkedin: "aisha.sajo@emory.edu", image: 'aisha.jpg' }, 
+        { name: "Leo Huang", role: "Public Relations Chair", website: "Caramel Corn Peanuts Website", linkedin: "leo.huang@emory.edu", image: 'leo.jpg' }, 
+        { name: "Freddy Xiong", role: "Co-Hackathon Director", website: "Coffee", linkedin: "freddy.xiong@emory.edu", image: 'freddy.jpg' },
+        { name: "Taeeun Kim", role: "Co-Hackathon Director", website: "Hardtack", linkedin: "taeeun.kim@emory.edu", image: 'taeeun.jpg' },
     ];
 </script>
 
@@ -67,8 +67,8 @@ Test component section for displaying elements while building.
                       <div class="flex flex-col text-start h-full ml-7">
                         <h3 class="text-xl font-semibold my-4">{member.name}</h3>
                         <p class="text-gray-600">{member.role}</p>
-                        <p class="text-sm my-4">{member.snack}</p>
-                        <p class="mt-4 text-blue-500">{member.contact}</p>   
+                        <a href={member.website} target="_blank" rel="noopener noreferrer" class="font-bold text-sm my-4">Personal Website</a>
+                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" class="font-bold mt-4 text-blue-800">LinkedIn</a>   
                       </div>
                 </Carousel.Item>
               {/each}
