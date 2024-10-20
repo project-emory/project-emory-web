@@ -1,17 +1,6 @@
 <script lang="ts">
     import Logo from "./Logo.svelte";
-    export const scrollTo = (element: HTMLElement, offset: number = 0) => {
-        const y = element.getBoundingClientRect().top + window.pageYOffset + offset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-    
-    function handleNavClick(event: MouseEvent, sectionId: string) {
-        event.preventDefault();
-        const section = document.getElementById(sectionId);
-        if (section) {
-            scrollTo(section);
-        }
-    }
+    import { handleClick } from '$lib/utils/scroll';
 </script>
 
 <!-- @component
@@ -22,21 +11,21 @@ A simple navbar component to provide easy jumping between sections on the page.
         <ul class="flex justify-center items-center w-7/12 bg-[#5A789E] font-bold py-2 px-6 rounded-lg">
             <div class="nav w-full flex items-center justify-between">
                 <li class=" bg-white p-2 px-4 rounded-lg w-[125px] flex justify-center">
-                    <a href="/#about" on:click={(e) => handleNavClick(e, 'about')}> About Us </a>
+                    <a href="/#about" on:click={(e) => handleClick(e, 'about')}> About Us </a>
                 </li>
                 <li class=" bg-white p-2 px-4 rounded-lg w-[125px] flex justify-center">
-                    <a href="/#upcoming-events" on:click={(e) => handleNavClick(e, 'events')}>Upcoming</a>
+                    <a href="/#upcoming-events" on:click={(e) => handleClick(e, 'events')}>Upcoming</a>
                 </li>
                 <li class="rounded-full w-12">
-                    <a href="/" on:click={(e) => handleNavClick(e, 'test')}>
+                    <a href="/" on:click={(e) => handleClick(e, 'test')}>
                         <Logo background="transparent" shortArc="#f1a709" longArc="#00379f" />
                     </a>
                 </li>
                 <li class=" bg-white p-2 px-4 rounded-lg w-[125px] flex justify-center">
-                    <a href="/#past-events" on:click={(e) => handleNavClick(e, 'past')}>Past Events</a>
+                    <a href="/#past-events" on:click={(e) => handleClick(e, 'past')}>Past Events</a>
                 </li>
                 <li class=" bg-white p-2 px-4 rounded-lg w-[125px] flex justify-center">
-                    <a href="/#contact" on:click={(e) => handleNavClick(e, 'contactus')}> Contact </a>
+                    <a href="/#contact" on:click={(e) => handleClick(e, 'contactus')}> Contact </a>
                 </li>
             </div>
         </ul>

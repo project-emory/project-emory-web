@@ -1,6 +1,7 @@
 <script lang="ts">
     import * as Carousel from "$lib/components/ui/carousel/index.js";
-
+    import { setupIntersectionObserver } from '$lib/utils/scrollanim'; 
+    
     const teamMembers = [
         { name: "Andrew Chung", role: "President", website: "https://achung1020.github.io/ac-website/", linkedin:"http://linkedin.com/in/andrew0chung", image: 'andrewc.jpg' },
         { name: "Andrew Lu", role: "Secretary", website: "https://andrewtlu.github.io", linkedin:"https://www.linkedin.com/in/andrewtlu/", image: 'andrewl.jpg' }, 
